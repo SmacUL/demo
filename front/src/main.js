@@ -6,23 +6,19 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import iView from 'iview';
-import 'iview/dist/styles/iview.css';
-import VueSimplemde from 'vue-simplemde';
-import 'simplemde/dist/simplemde.min.css';
+import axios from 'axios';
+
+// import iView from 'iview';
+// import 'iview/dist/styles/iview.css';
+// import VueSimplemde from 'vue-simplemde';
+// import 'simplemde/dist/simplemde.min.css';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
 // Vue.config.productionTip = false
 
-// // 引用axios，并设置基础URL为后端服务api地址
-// var axios = require('axios')
-// axios.defaults.baseURL = 'http://localhost:8080/api'
-// // 将API方法绑定到全局
-// Vue.prototype.$axios = axios
-// Vue.config.productionTip = false
+Vue.use(ElementUI);
 
-import axios from 'axios';
 // 将API方法绑定到全局
 Vue.prototype.$axios = axios;
 axios.defaults.withCredentials = true;

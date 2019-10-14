@@ -3,8 +3,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
-import BlogLogin from '@/components/manage/BlogLogin.vue'
-import BlogIndex from '@/components/home/BlogIndex.vue'
+// import BlogLogin from '@/components/manage/BlogLogin.vue'
+// import BlogIndex from '@/components/home/BlogIndex.vue'
+
+import Login from '../page/Login'
+import Index from '../page/Index'
 
 
 Vue.use(Router)
@@ -22,22 +25,30 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
-      redirect: '/login'
+      path:"/",
+      alias:'/login',
+      name:"login",
+      component:Login,
     },
     {
-      path: '/index',
-      name: 'BlogIndex',
-      component: BlogIndex
+        path:"/index",
+        name:"Index",
+        component:Index,
     },
-    {
-      path: '/manage',
-      redirect: '/login'
-    },
-    {
-      path: '/login',
-      name: 'BlogLogin',
-      component: BlogLogin
-    }
+    // {
+    //   path: '/login',
+    //   name: 'Login',
+    //   component: Login
+    // }
+    // {
+    //   path: '/index',
+    //   name: 'BlogIndex',
+    //   component: BlogIndex
+    // },
+    // {
+    //   path: '/manage',
+    //   redirect: '/login'
+    // },
+
   ]
 })
