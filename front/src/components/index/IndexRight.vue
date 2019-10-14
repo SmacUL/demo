@@ -36,7 +36,7 @@ export default {
     methods: {
         refreshNews() {
             // 获得热点新闻列表
-
+            
             // this.$axios.post('/api/index/getHotNewsList').then((response) => {
             // if (response.data == true){
             //     this.$Message.success('刷新成功!');
