@@ -1,5 +1,14 @@
 <template>
-    <indexLeft></indexLeft>
+    
+    
+    <el-container>
+        <el-header></el-header>
+        <el-container>
+            <el-aside width="250px"><indexLeft></indexLeft></el-aside>
+            <el-main>Main</el-main>
+            <el-aside width="250px"><indexRight></indexRight></el-aside>
+        </el-container>
+    </el-container>
 </template>
 
 <script>

@@ -1,9 +1,8 @@
-// 首页
 
 <template>
   <div>
-    <el-row class="tac" style="width: 300px">
-      <el-col :span="12">
+    <el-row class="tac" style="width: 250px">
+      <el-col>
         <!-- <h5>默认颜色</h5> -->
         <el-menu default-active="1" class="el-menu-vertical-demo">
           <el-menu-item index="1">
