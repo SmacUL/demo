@@ -1,20 +1,20 @@
 <template>
   <div id="loginDiv">
-    <div>
-      <div>
-        <span>用户名：</span>
-        <el-input v-model="username" placeholder="请输入用户名"></el-input>
-      </div>
-      <div>
-        <span>密码：</span>
-        <el-input v-model="password" placeholder="请输入密码"></el-input>
-      </div>
 
-      <div>
-        <el-button type="primary" @click="login()">Login</el-button>
-      </div>
-      <span class="clickFont">没有账号？</span><span>注册</span>
-    </div>
+    <el-form ref="form" :model="form" label-width="80px">
+        <el-form-item label="用户名：">
+            <el-input v-model="form.username" placeholder="请输入用户名"></el-input>
+        </el-form-item>
+        <el-form-item label="密码：">
+            <el-input v-model="form.password" placeholder="请输入密码"></el-input>
+        </el-form-item>
+        <el-form-item>
+            <el-button type="primary" @click="login()">Login</el-button>
+        </el-form-item>
+        <!-- <el-form-item>
+            <el-button type="primary" @click="register()">Register</el-button>
+        </el-form-item> -->
+    </el-form>
   </div>
 </template>
 
@@ -22,8 +22,11 @@
     export default {
         data() {
             return {
-                username:'NONE',
-                password:'NONE',
+                form: {
+                    username:'NONE',
+                    password:'NONE',
+                }
+               
             }
         },
         methods: {
@@ -31,8 +34,8 @@
                 // 需要修改需修改
 
                 // this.$axios.post('/api/login/verify',{
-                //     username:this.username,
-                //     passwork:this.password,
+                //     username:this.form.username,
+                //     passwork:this.form.password,
                 // }).then((response) => {
                 // if (response.data == true){
                 //     this.$Message.success('登录成功!');
@@ -41,7 +44,7 @@
                 //     this.$Message.error("用户名或密码错误");
                 // }
                 // });
-                
+
                 this.$router.push('index');
             },
         }

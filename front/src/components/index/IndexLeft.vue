@@ -2,23 +2,28 @@
 
 <template>
   <div>
-    <blog-header></blog-header>
-    <hr/>
-    <div>
-      这是首页，嘻嘻嘻。
-    </div>
-    <hr/>
-    <blog-footer></blog-footer>
+    <el-row class="tac" style="width: 300px">
+      <el-col :span="12">
+        <!-- <h5>默认颜色</h5> -->
+        <el-menu default-active="1" class="el-menu-vertical-demo">
+          <el-menu-item index="1">
+            <span slot="title">导航一</span>
+          </el-menu-item>
+          <el-menu-item index="2">
+            <span slot="title">导航二</span>
+          </el-menu-item>
+          <el-menu-item index="3">
+            <span slot="title">导航三</span>
+          </el-menu-item>
+        </el-menu>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
-import blogHeader from '@/components/common/BlogHeader.vue'
-import blogFooter from '@/components/common/BlogFooter.vue'
 
 export default {
-  name: 'BlogIndex',
-  // blogHeader/blogFooter组件给申明到components里面然后在template里面使用
-  components: { blogHeader, blogFooter }
+    
 }
 </script>
