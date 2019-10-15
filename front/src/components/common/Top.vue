@@ -3,8 +3,14 @@
 <template>
     <el-container>
         <el-aside>
+
+            <!-- <router-link :to="{name:'book',params:{bookId:book.bookId}}" >
+                  <img :src="book.bookCover" 
+                    style="width: 80px; height: 80px" class="bookImg">
+            </router-link> -->
+
             <img src="../../assets/logo.png"
-                style="width: 50px; height: 50px"
+                style="width: 80px; height: 80px"
                 :click="returnIndex()">
         </el-aside>
         <el-main>
